@@ -47,6 +47,7 @@ class TasksController extends Controller
         $task = new Task();
         $task->name = $request['name'];
         $task->description = $request['description'];
+        $task->confirmed = 0;
         $request->user()->tasks()->save($task);
     }
 
@@ -89,6 +90,7 @@ class TasksController extends Controller
         $updatedTask = Task::findOrFail($id);
         $updatedTask->name = $request['name'];
         $updatedTask->description = $request['description'];
+        $updatedTask->confirmed = $request['confirmed'];
         $updatedTask->update();
     }
 

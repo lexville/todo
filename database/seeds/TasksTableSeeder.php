@@ -18,7 +18,8 @@ class TasksTableSeeder extends Seeder
                 "name" => $faker->name,
                 "description" => $faker->paragraph,
                 "user_id" => rand(1, 5),
-                "created_at" => $faker->dateTime
+                "created_at" => $faker->dateTime,
+                'confirmed' => false,
             ]);
         }
     }

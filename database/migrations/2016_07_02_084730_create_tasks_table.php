@@ -18,6 +18,7 @@ class CreateTasksTable extends Migration
             $table->string('description');
             $table->integer('user_id');
             $table->timestamps();
+            $table->boolean('confirmed');
         });
     }
 

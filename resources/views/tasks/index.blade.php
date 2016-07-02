@@ -50,6 +50,12 @@
                             <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Completed ?</label>
+                        <div class="col-sm-9">
+                            <input check="checked" type="checkbox" id="checkbox" name="confirmed" value="true">
+                        </div>
+                    </div>
               </form>
           </div>
           <div class="modal-footer">

@@ -50,7 +50,14 @@ $('.task-edit').on('click', function(e){
     $('#btn-save').on('click', function() {
         var name = $('#name').val();
         var description = $('#description').val();
-        var data = {name: name, description: description, _token: token };
+        if ($("#checkbox").is(":checked")) {
+            var checkbox = 1;
+        } else {
+            var checkbox = 0;
+        }
+
+        var data = {name: name, description: description, _token: token , confirmed: checkbox};
+        console.log(data);
         $.ajax({
             method: 'PUT',
             url: url + '/' + id,
@@ -58,7 +65,7 @@ $('.task-edit').on('click', function(e){
         })
         .done(function() {
             $('#myModal').modal('hide');
-            location.reload();
+            //location.reload();
         })
         .fail(function() {
             console.log("Failed to add. One or more fields missing");
