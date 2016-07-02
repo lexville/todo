@@ -1,0 +1,12 @@
+.background {
+    background-image: url(/img/bgimage.jpg);
+    background-repeat:no-repeatdisplay: compact;
+}
+.home {
+    color: white;
+}
+.home-info {
+    font-family: cursive;
+    font-size: 100px;
+    margin-top: 5%;
+}
